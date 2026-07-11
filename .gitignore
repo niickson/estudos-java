@@ -1,0 +1,26 @@
+# Arquivos .class compilados
+*.class
+
+# Pastas geradas automaticamente pela build (NetBeans/Ant)
+build/
+dist/
+nbbuild/
+nbdist/
+
+# Configuração LOCAL/privada do NetBeans (específica da sua máquina)
+**/nbproject/private/
+
+# Saída do programa gerada em tempo de execução (não é código-fonte)
+filmes.json
+filmes.txt
+
+# Arquivo de configuração com dados sensíveis — chave de API, senhas
+# (as bibliotecas em lib/ NÃO entram aqui: o Ant precisa delas para compilar)
+config.properties
+
+# Logs
+*.log
+
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
