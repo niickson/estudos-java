@@ -1,4 +1,4 @@
-package rascunhos02.screenmatch.excecoes;
+package screenmatch.excecoes;
 //Classe para as exceções
 public class ErroDeConversaoDeAnoException extends RuntimeException{
 //Atributos

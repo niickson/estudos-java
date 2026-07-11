@@ -1,13 +1,13 @@
-package rascunhos02;
+package screenmatch;
 import java.util.ArrayList;
-import rascunhos02.screenmatch.calculos.CalculadoraDeTempo;
-import rascunhos02.screenmatch.modelos.Episodio;
-import rascunhos02.screenmatch.modelos.Filme;
-import rascunhos02.screenmatch.modelos.FiltroRecomendacao;
-import rascunhos02.screenmatch.modelos.Serie;
+import screenmatch.calculos.CalculadoraDeTempo;
+import screenmatch.modelos.Episodio;
+import screenmatch.modelos.Filme;
+import screenmatch.modelos.FiltroRecomendacao;
+import screenmatch.modelos.Serie;
 //Programa Principal
 //Minha chave de acesso ao OMDb API: d4ecd227
-public class Rascunhos02 {
+public class Principal {
     public static void main(String[] args) {
         Filme f1 = new Filme("Interestelar", 2014);
         Filme f2 = new Filme("O poderoso chefao", 1972);

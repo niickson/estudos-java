@@ -1,5 +1,5 @@
-package rascunhos02.screenmatch.modelos;
-import rascunhos02.screenmatch.calculos.Classificavel;
+package screenmatch.modelos;
+import screenmatch.calculos.Classificavel;
 //Classe Isolada 03
 public class FiltroRecomendacao {
     public void filtra(Classificavel classificavel){

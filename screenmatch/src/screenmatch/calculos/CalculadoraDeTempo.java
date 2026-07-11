@@ -1,5 +1,5 @@
-package rascunhos02.screenmatch.calculos;
-import rascunhos02.screenmatch.modelos.Titulo;
+package screenmatch.calculos;
+import screenmatch.modelos.Titulo;
 //Classe Isolada 02
 public class CalculadoraDeTempo {
 //Atributos    

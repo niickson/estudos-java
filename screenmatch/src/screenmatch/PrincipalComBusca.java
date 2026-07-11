@@ -1,4 +1,4 @@
-package rascunhos02;
+package screenmatch;
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -11,9 +11,9 @@ import java.net.http.HttpClient;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import rascunhos02.screenmatch.excecoes.ErroDeConversaoDeAnoException;
-import rascunhos02.screenmatch.modelos.Titulo;
-import rascunhos02.screenmatch.modelos.TituloOmdb;
+import screenmatch.excecoes.ErroDeConversaoDeAnoException;
+import screenmatch.modelos.Titulo;
+import screenmatch.modelos.TituloOmdb;
 //Programa Principal com Busca
 //Minha chave de acesso ao OMDb API: d4ecd227
 public class PrincipalComBusca {

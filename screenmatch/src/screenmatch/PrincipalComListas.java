@@ -1,12 +1,12 @@
-package rascunhos02;
+package screenmatch;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;
-import rascunhos02.screenmatch.modelos.Filme;
-import rascunhos02.screenmatch.modelos.Serie;
-import rascunhos02.screenmatch.modelos.Titulo;
+import screenmatch.modelos.Filme;
+import screenmatch.modelos.Serie;
+import screenmatch.modelos.Titulo;
 //Classe Principal com Listas
 //Minha chave de acesso ao OMDb API: d4ecd227
 public class PrincipalComListas {

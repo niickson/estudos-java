@@ -1,5 +1,5 @@
-package rascunhos02.screenmatch.modelos;
-import rascunhos02.screenmatch.excecoes.ErroDeConversaoDeAnoException;
+package screenmatch.modelos;
+import screenmatch.excecoes.ErroDeConversaoDeAnoException;
 import com.google.gson.annotations.SerializedName;
 //Classe Mãe
 public class Titulo implements Comparable<Titulo>{

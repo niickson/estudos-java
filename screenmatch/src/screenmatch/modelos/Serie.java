@@ -1,4 +1,4 @@
-package rascunhos02.screenmatch.modelos;
+package screenmatch.modelos;
 //Classe Filha 02
 public class Serie extends Titulo{
 //Atributos    
