@@ -1,0 +1,3 @@
+# Copie este arquivo para "config.properties" e coloque sua chave real do OMDb.
+# O config.properties NAO e enviado ao GitHub (esta no .gitignore).
+omdb.apikey=SUA_CHAVE_AQUI

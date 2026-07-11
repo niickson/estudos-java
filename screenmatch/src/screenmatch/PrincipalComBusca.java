@@ -2,6 +2,7 @@ package screenmatch;
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import java.io.FileInputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URI;
@@ -10,23 +11,33 @@ import java.net.http.HttpResponse;
 import java.net.http.HttpClient;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 import java.util.Scanner;
 import screenmatch.excecoes.ErroDeConversaoDeAnoException;
 import screenmatch.modelos.Titulo;
 import screenmatch.modelos.TituloOmdb;
 //Programa Principal com Busca
-//Minha chave de acesso ao OMDb API: d4ecd227
 public class PrincipalComBusca {
     public static void main(String[] args) throws IOException, InterruptedException {
         Scanner pesquisa = new Scanner(System.in);
         String busca = "";
-        //Lista que salva todos os titulos convertidos 
+        //Lista que salva todos os titulos convertidos
         List<Titulo> titulos = new ArrayList<>();
-        
+
         //Faz com que os atributos sejam reconhecidos e não precise referencia-los com letra Maiuscula no Record.
         Gson gson = new GsonBuilder().setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE)
                 .setPrettyPrinting().create();
-        
+
+        // Lê a chave da API do arquivo config.properties (que fica fora do controle de versão)
+        Properties config = new Properties();
+        try (FileInputStream fis = new FileInputStream("config.properties")) {
+            config.load(fis);
+        } catch (IOException e) {
+            System.out.println("Nao encontrei o config.properties. Crie o arquivo na raiz do projeto com: omdb.apikey=SUA_CHAVE");
+            return;
+        }
+        String apiKey = config.getProperty("omdb.apikey");
+
         while(!busca.equalsIgnoreCase("sair")){
         System.out.println("Digite um filme para busca: ");
         busca = pesquisa.nextLine();
@@ -35,7 +46,7 @@ public class PrincipalComBusca {
             break;
         }
         //Realiza uma busca no OMDb atravéz do nome do filme(digitado pelo usuario).
-        String endereco = "https://www.omdbapi.com/?t=" + busca.replace(" ", "+") + "&apikey=d4ecd227";
+        String endereco = "https://www.omdbapi.com/?t=" + busca.replace(" ", "+") + "&apikey=" + apiKey;
         
         try{
         HttpClient client = HttpClient.newHttpClient();

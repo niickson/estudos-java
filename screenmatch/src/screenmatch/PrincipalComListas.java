@@ -8,7 +8,6 @@ import screenmatch.modelos.Filme;
 import screenmatch.modelos.Serie;
 import screenmatch.modelos.Titulo;
 //Classe Principal com Listas
-//Minha chave de acesso ao OMDb API: d4ecd227
 public class PrincipalComListas {
     public static void main(String[] args) {
         Filme f1 = new Filme("Interestelar", 2014);
